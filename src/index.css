@@ -1,0 +1,150 @@
+@import url('https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&f[]=satoshi@400,500,700&display=swap');
+
+:root {
+  /* 60-30-10 Rule: Light Minimalism Theme */
+  --bg-60: #FAFAF9; /* Warm off-white */
+  --bg-card: #FFFFFF; /* Pure crisp white for Bento cards */
+  --color-30: #e2e8f0; /* Soft gray for faint borders */
+  --color-10: #0ea5e9; /* Vibrant electric blue for CTAs */
+  --color-text-gradient: #3b82f6;
+  
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --border-glass: rgba(0, 0, 0, 0.05);
+  
+  --font-title: 'Clash Display', sans-serif;
+  --font-body: 'Satoshi', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-60);
+  color: var(--text-main);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-title);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Lenis Recommended CSS */
+html.lenis, html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Glassmorphism Utilities */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-glass);
+}
+
+.bento-card {
+  background: var(--bg-card);
+  border: 1px solid var(--color-30);
+  border-radius: 24px;
+  padding: 2.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -2px rgba(0, 0, 0, 0.02);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.bento-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+}
+
+/* Typography Utilities */
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-10) 0%, var(--color-text-gradient) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.accent-text {
+  color: var(--color-10);
+}
+
+/* Layout Utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section {
+  padding: 6rem 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.split-layout {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  gap: 3rem;
+  align-items: center;
+}
+
+.split-layout.reversed {
+  grid-template-columns: 40% 60%;
+}
+
+@media (max-width: 1024px) {
+  .split-layout, .split-layout.reversed {
+    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* Background Layers */
+.bg-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+}
+.bg-glows {
+  background: 
+    radial-gradient(circle at 15% 50%, rgba(14, 165, 233, 0.05) 0%, transparent 60%),
+    radial-gradient(circle at 85% 30%, rgba(59, 130, 246, 0.03) 0%, transparent 60%);
+}
+
+/* Animation Utilities for GSAP */
+.fade-up-element {
+  opacity: 0;
+  transform: translateY(40px);
+}

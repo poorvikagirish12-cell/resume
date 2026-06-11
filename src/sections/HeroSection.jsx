@@ -25,7 +25,7 @@ const HeroSection = () => {
           fontWeight: 500,
           lineHeight: 1.6
         }}>
-          Aspiring Google Student Ambassador bridging the gap between academia and industry with intelligent, scalable solutions.
+          7th-Semester AI & ML Student | Building Scalable, Intelligent Solutions
         </p>
 
         <div className="fade-up-element" style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginTop: '3rem' }}>

@@ -33,7 +33,7 @@ const AboutSection = () => {
         <div style={{ width: '100%', height: '100%', minHeight: '500px', position: 'relative' }}>
           <div className="bento-card" style={{ padding: 0, height: '100%', width: '100%', position: 'absolute', overflow: 'hidden' }}>
             <img 
-              src={`${import.meta.env.BASE_URL}profile.jpg`} 
+              src={`${import.meta.env.BASE_URL}profile_v2.jpg`} 
               alt="Poorvika G" 
               style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               onError={(e) => { e.target.src = 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800' }}

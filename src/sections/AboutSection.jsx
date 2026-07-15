@@ -46,7 +46,7 @@ const AboutSection = () => {
           <h2 className="accent-text fade-up-element" style={{ fontSize: '1.2rem', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '1rem' }}>About Me</h2>
           
           <div ref={textRef} style={{ fontSize: '1.8rem', color: 'var(--text-main)', marginBottom: '2.5rem', fontWeight: 500, lineHeight: 1.4 }}>
-            {"Motivated 7th-semester AI and ML engineering student specializing in full-stack web development and computer vision. I thrive on building efficient, intelligent systems that drive user engagement and operational impact. Committed to leveraging my technical expertise to solve complex challenges in fast-paced, large-scale e-commerce environments.".split(' ').map((word, i) => (
+            {"Artificial Intelligence and Machine Learning Engineering student with hands-on experience in Computer Vision, Machine Learning, Deep Learning, and Full Stack Development. Skilled in Python, YOLOv8, OpenCV, TensorFlow, PyTorch, Django, and AWS Cloud fundamentals. Experienced in developing AI-powered applications, REST APIs, and real-time computer vision systems through internships and academic projects. Passionate about solving real-world problems using AI and seeking opportunities to contribute as an AI/ML Engineer.".split(' ').map((word, i) => (
               <span key={i} className="reveal-word" style={{ display: 'inline-block', marginRight: '0.4rem' }}>{word}</span>
             ))}
           </div>

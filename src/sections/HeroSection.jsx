@@ -13,7 +13,7 @@ const HeroSection = () => {
           letterSpacing: '-0.02em'
         }}>
           Hi, I'm Poorvika G.<br />
-          <span className="gradient-text">Full Stack</span> & <span className="gradient-text">Machine Learning</span><br />
+          <span className="gradient-text">Artificial Intelligence</span> & <span className="gradient-text">Machine Learning</span><br />
           Engineering Student.
         </h1>
         
